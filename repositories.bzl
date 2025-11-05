@@ -26,8 +26,8 @@ def contrib_rules_jvm_deps():
     maybe(
         http_archive,
         name = "bazel_skylib",
-        sha256 = "bc283cdfcd526a52c3201279cda4bc298652efa898b10b4db0837dc51652756f",
-        url = "https://github.com/bazelbuild/bazel-skylib/releases/download/1.7.1/bazel-skylib-1.7.1.tar.gz",
+        sha256 = "1f21e46909fc5ed9e5c9a78d3c5f6a6fc1b3bb4a0f5b0f043c4070fd279e95d1",
+        url = "https://github.com/bazelbuild/bazel-skylib/releases/download/1.8.1/bazel-skylib-1.8.1.tar.gz",
     )
 
     maybe(
@@ -66,9 +66,9 @@ def contrib_rules_jvm_deps():
             http_archive,
             name = "rules_java",
             urls = [
-                "https://github.com/bazelbuild/rules_java/releases/download/7.12.1/rules_java-7.12.1.tar.gz",
+                "https://github.com/bazelbuild/rules_java/releases/download/8.16.1/rules_java-8.16.1.tar.gz",
             ],
-            sha256 = "dfbadbb37a79eb9e1cc1e156ecb8f817edf3899b28bc02410a6c1eb88b1a6862",
+            sha256 = "1b30698d89dccd9dc01b1a4ad7e9e5c6e669cdf1918dbb050334e365b40a1b5e",
         )
 
     maybe(
@@ -81,26 +81,26 @@ def contrib_rules_jvm_deps():
     maybe(
         http_archive,
         name = "bazel_features",
-        sha256 = "b4b145c19e08fd48337f53c383db46398d0a810002907ff0c590762d926e05be",
-        strip_prefix = "bazel_features-1.18.0",
-        url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.18.0/bazel_features-v1.18.0.tar.gz",
+        sha256 = "2cd9e57d4c38675d321731d65c15258f3a66438ad531ae09cb8bb14217dc8572",
+        strip_prefix = "bazel_features-1.20.0",
+        url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.20.0/bazel_features-v1.20.0.tar.gz",
     )
 
     # Required by the frozen deps as this is referenced from the build file in the zips we ship
     maybe(
         http_archive,
         name = "rules_shell",
-        sha256 = "d8cd4a3a91fc1dc68d4c7d6b655f09def109f7186437e3f50a9b60ab436a0c53",
-        strip_prefix = "rules_shell-0.3.0",
-        url = "https://github.com/bazelbuild/rules_shell/releases/download/v0.3.0/rules_shell-v0.3.0.tar.gz",
+        sha256 = "a5cab01dea5779d97815ad5ab67df33e7d6be4f02b4f0d59b3a5c7e01fa20d1f",
+        strip_prefix = "rules_shell-0.6.0",
+        url = "https://github.com/bazelbuild/rules_shell/releases/download/v0.6.0/rules_shell-v0.6.0.tar.gz",
     )
 
     maybe(
         http_archive,
         name = "rules_jvm_external",
-        sha256 = "3a4d56357851cf5b0dae538b3f3e0612a4f58925dfb3cadb2e0c4e87d51e629e",
-        strip_prefix = "rules_jvm_external-6.5",
-        url = "https://github.com/bazel-contrib/rules_jvm_external/releases/download/6.5/rules_jvm_external-6.5.tar.gz",
+        sha256 = "4146faa4755de4a24103f26f93693a9efb7eab91a80a8b5b8e1a06ff67e72c0a",
+        strip_prefix = "rules_jvm_external-6.7",
+        url = "https://github.com/bazel-contrib/rules_jvm_external/releases/download/6.7/rules_jvm_external-6.7.tar.gz",
     )
 
 def contrib_rules_jvm_gazelle_deps():
@@ -118,8 +118,8 @@ def contrib_rules_jvm_gazelle_deps():
     maybe(
         http_archive,
         name = "bazel_gazelle",
-        sha256 = "b760f7fe75173886007f7c2e616a21241208f3d90e8657dc65d36a771e916b6a",
-        url = "https://github.com/bazelbuild/bazel-gazelle/releases/download/v0.39.1/bazel-gazelle-v0.39.1.tar.gz",
+        sha256 = "7dfe96c4816e8e29715a0988b5edcaa6f7c0e17ebaf9b92ad4ecfb3fa4bcac8a",
+        url = "https://github.com/bazelbuild/bazel-gazelle/releases/download/v0.42.0/bazel-gazelle-v0.42.0.tar.gz",
     )
 
     maybe(
@@ -133,16 +133,16 @@ def contrib_rules_jvm_gazelle_deps():
     maybe(
         http_archive,
         name = "io_bazel_rules_go",
-        sha256 = "f4a9314518ca6acfa16cc4ab43b0b8ce1e4ea64b81c38d8a3772883f153346b8",
-        url = "https://github.com/bazelbuild/rules_go/releases/download/v0.50.1/rules_go-v0.50.1.zip",
+        sha256 = "f7a2bb7abdb0c9ff0c6e0c29f2a84b41f9f7d8be88f2dde8fdb0b12e8c2e94e3",
+        url = "https://github.com/bazelbuild/rules_go/releases/download/v0.52.0/rules_go-v0.52.0.zip",
     )
 
     maybe(
         http_archive,
         name = "rules_proto",
-        sha256 = "6fb6767d1bef535310547e03247f7518b03487740c11b6c6adb7952033fe1295",
-        strip_prefix = "rules_proto-6.0.2",
-        url = "https://github.com/bazelbuild/rules_proto/releases/download/6.0.2/rules_proto-6.0.2.tar.gz",
+        sha256 = "303e86e722a520f6f326a50b41cfc16b98fe6d1955ce46642a5b7a67c11c0f5d",
+        strip_prefix = "rules_proto-7.0.2",
+        url = "https://github.com/bazelbuild/rules_proto/releases/download/7.0.2/rules_proto-7.0.2.tar.gz",
     )
 
     # We need to expand the contents of `@rules_proto//proto:repositories.bzl" here so
@@ -150,20 +150,17 @@ def contrib_rules_jvm_gazelle_deps():
     maybe(
         http_archive,
         name = "rules_cc",
-        sha256 = "4aeb102efbcfad509857d7cb9c5456731e8ce566bfbf2960286a2ec236796cc3",
-        strip_prefix = "rules_cc-2f8c04c04462ab83c545ab14c0da68c3b4c96191",
-        urls = [
-            "https://mirror.bazel.build/github.com/bazelbuild/rules_cc/archive/2f8c04c04462ab83c545ab14c0da68c3b4c96191.tar.gz",
-            "https://github.com/bazelbuild/rules_cc/archive/2f8c04c04462ab83c545ab14c0da68c3b4c96191.tar.gz",
-        ],
+        sha256 = "2df25bb76bd0d539b3e6c35eb6a15a5fc39e2c22bb1cddb7adc14a4f7b3badb5",
+        strip_prefix = "rules_cc-0.1.1",
+        url = "https://github.com/bazelbuild/rules_cc/releases/download/0.1.1/rules_cc-0.1.1.tar.gz",
     )
 
     maybe(
         http_archive,
         name = "rules_python",
-        sha256 = "d70cd72a7a4880f0000a6346253414825c19cdd40a28289bdf67b8e6480edff8",
-        strip_prefix = "rules_python-0.28.0",
-        url = "https://github.com/bazelbuild/rules_python/releases/download/0.28.0/rules_python-0.28.0.tar.gz",
+        sha256 = "eb88a3b0cbf23cf83e73d29f2cdb4c9e08c1ab945c18e34f0db4eb58e17ea1ce",
+        strip_prefix = "rules_python-1.5.4",
+        url = "https://github.com/bazelbuild/rules_python/releases/download/1.5.4/rules_python-1.5.4.tar.gz",
     )
 
     # And other repos we need, apparently
@@ -171,9 +168,9 @@ def contrib_rules_jvm_gazelle_deps():
     maybe(
         http_archive,
         name = "bazel_features",
-        sha256 = "3646ffd447753490b77d2380fa63f4d55dd9722e565d84dfda01536b48e183da",
-        strip_prefix = "bazel_features-1.19.0",
-        url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.19.0/bazel_features-v1.19.0.tar.gz",
+        sha256 = "2cd9e57d4c38675d321731d65c15258f3a66438ad531ae09cb8bb14217dc8572",
+        strip_prefix = "bazel_features-1.20.0",
+        url = "https://github.com/bazel-contrib/bazel_features/releases/download/v1.20.0/bazel_features-v1.20.0.tar.gz",
     )
 
     maybe(
@@ -190,7 +187,9 @@ def io_grpc_grpc_java():
     maybe(
         http_archive,
         name = "io_grpc_grpc_java",
-        sha256 = "17dd91014032a147c978ae99582fddd950f5444388eae700cf51eda0326ad2f9",
-        strip_prefix = "grpc-java-1.56.1",
-        urls = ["https://github.com/grpc/grpc-java/archive/v1.56.1.tar.gz"],
+        sha256 = "29a5732d5a93cbccfa8f46d59c67c549c26d66ee0498a4be07ac99df09e88620",
+        strip_prefix = "grpc-java-1.71.0",
+        patch_args = ["-p1"],
+        patches = ["//third_party:grpc-java.patch"],
+        urls = ["https://github.com/grpc/grpc-java/archive/v1.71.0.tar.gz"],
     )
